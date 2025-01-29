@@ -17,13 +17,15 @@ body {
 }
 
 main {
-  width: 85%;
+  width: 100%;
   height: 82vh;
   margin: 0 auto;
+  position: relative;
 }
 
 .main__presentation {
-  width: 100%;
+  width: 85%;
+  margin: 0 auto;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -61,7 +63,10 @@ main {
 }
 
 .main__shorten {
-  width: 80%;
+  position: relative;
+  z-index: 11;
+  top: -3%;
+  width: 65%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -103,7 +108,6 @@ main {
   padding: 1rem 2rem;
   border-radius: 10px;
   border: none;
-  border: none;
   color: white;
   background-color: hsl(180, 66%, 49%);
   font-weight: 700;
@@ -118,6 +122,7 @@ main {
   justify-content: space-between;
   padding: 0.5rem 1rem;
   border-radius: 10px;
+  background-color: white;
 }
 .main__shorten .shorten__shortened .shortened__link-unshort {
   color: hsl(260, 8%, 14%);
@@ -138,7 +143,6 @@ main {
   padding: 0.8rem 1.5rem;
   border-radius: 10px;
   border: none;
-  border: none;
   color: white;
   background-color: hsl(180, 66%, 49%);
   font-weight: 700;
@@ -148,9 +152,39 @@ main {
   cursor: pointer;
 }
 
+.main__statics {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(0, 0%, 75%);
+  z-index: 1;
+}
+.main__statics .statics-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  margin: 0 auto;
+}
+.main__statics .statics-container .statics__header {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__statics .statics-container .statics__header h2 {
+  margin: 0;
+}
+
 @media (max-width: 800px) {
   .main__presentation {
     justify-content: flex-start;
+    margin-bottom: 2rem;
   }
   .main__presentation .presentation__info {
     max-width: 100%;
@@ -164,6 +198,42 @@ main {
   .main__presentation .presentation__img {
     order: 1;
     margin: 0 auto;
+    width: 100%;
+  }
+  .main__shorten {
+    width: 85%;
+    row-gap: 1rem;
+    top: 0;
+  }
+  .main__shorten .shorten__action {
+    flex-direction: column;
+    padding: 1rem;
+    row-gap: 1rem;
+  }
+  .main__shorten .shorten__action .action__input {
+    width: 80%;
+  }
+  .main__shorten .shorten__action .action__button {
+    width: 90%;
+  }
+  .main__shorten .shorten__shortened {
+    flex-direction: column;
+  }
+  .main__shorten .shorten__shortened .shortened__result {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 0.5rem;
+  }
+  .main__shorten .shorten__shortened .shortened__result .result__copy-button {
+    width: 100%;
+  }
+  .main__statics {
+    height: 180vh;
+  }
+  .main__statics .statics-container {
+    margin-top: 2rem;
+  }
+  .main__statics .statics-container .statics__header {
     width: 100%;
   }
 }/*# sourceMappingURL=main.css.map */
