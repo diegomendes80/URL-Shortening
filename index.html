@@ -5,8 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+
+  <!-- Fonte usada: -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!--Estilos:  -->
+  <link rel="stylesheet" href="style/header/header.css">
+  <link rel="stylesheet" href="style/main/main.css">
+
+  <title>Shortly URL shortening API Challenge</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -16,23 +26,98 @@
 </head>
 <body>
 
-  Features
-  Pricing
-  Resources
+  <header class="header">
+      <img src="images/logo.svg" alt="logo" class="header__logo">
 
-  Login
-  Sign Up
+      <ul class="header__links mobile-mode">
+        <li class="links__link ">Features</li>
+        <li class="links__link">Pricing</li>
+        <li class="links__link">Resources</li>
+      </ul>
 
-  More than just shorter links
+      <div class="header__account mobile-mode">
+        <button class="account__login">Login</button>
+        <button class="account__signup">Sign Up</button>
+      </div>
 
-  Build your brand’s recognition and get detailed insights 
-  on how your links are performing.
+      <!-- ESSA REGIÃO SERÁ ATIVADA EM DISPOSITIVOS MOBILE: -->
 
-  Get Started
+      <div class="header__menu-hamburguer desktop-mode">
+        <div class="menu-hamburguer__line"></div>
+        <div class="menu-hamburguer__line"></div>
+        <div class="menu-hamburguer__line"></div>
+      </div>
+
+      <div class="header__mobile-navigation desktop-mode">
+        <ul class="mobile-navigation__links">
+          <li class="links__link ">Features</li>
+          <li class="links__link">Pricing</li>
+          <li class="links__link">Resources</li>
+        </ul>
+
+        <div class="linha-login"></div>
+
+        <div class="mobile-navigation__account">
+          <button class="account__login">Login</button>
+          <button class="account__signup">Sign Up</button>
+        </div>
+      </div>
+  </header>
+
+
+  <main class="main">
+      <section class="main__presentation">
+
+        <div class="presentation__info">
+          <h1 class="info__title">More than just shorter links</h1>
+          <p class="info__text">Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+          <button class="info__button">Get Started</button>
+
+        </div>
+
+      <img src="images/illustration-working.svg" alt="" class="presentation__img">
+
+      </section>
+
+      <section class="main__shorten">
+        <div class="shorten__action">
+          <input type="text" id="link-to-short" class="action__input" placeholder="Shorten a link here">
+          <button class="action__button">Shorten It!</button>
+
+          <div class="action__bg"></div>
+        </div>
+
+
+        <div class="shorten__shortened">
+          <p class="shortened__link-unshort">https:www.googleyoutube.com</p>
+
+          <div class="shortened__result">
+            <p class="result__link-short">https:google.com</p>
+            <button class="result__copy-button">Copy</button>
+
+          </div>
+
+
+        </div>
+
+        <div class="shorten__shortened">
+          <p class="shortened__link-unshort">https:www.googleyoutube.com</p>
+
+          <div class="shortened__result">
+            <p class="result__link-short">https:google.com</p>
+            <button class="result__copy-button">Copy</button>
+
+          </div>
+
+
+        </div>
+      </section>
+
+  </main>
+
+<!-- 
+ 
   
-  Shorten a link here...
-
-  Shorten It!
 
   Advanced Statistics
 
@@ -75,11 +160,15 @@
   About
   Our Team
   Careers
-  Contact
+  Contact -->
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
+
+
+  <!-- Scripts: -->
+  <script src="script.js"></script>
 </body>
 </html>
