@@ -1,188 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
 
-  <!-- Fonte usada: -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Fonte usada: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-  <!--Estilos:  -->
-  <link rel="stylesheet" href="style/header/header.css">
-  <link rel="stylesheet" href="style/main/main.css">
+    <!--Estilos:  -->
+    <link rel="stylesheet" href="style/header/header.css">
+    <link rel="stylesheet" href="style/main/main.css">
 
-  <title>Shortly URL shortening API Challenge</title>
+    <title>Shortly URL shortening API Challenge</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+  </head>
+  <body>
 
-  <header class="header">
-      <img src="images/logo.svg" alt="logo" class="header__logo">
+    <header class="header">
+        <img src="images/logo.svg" alt="logo" class="header__logo">
 
-      <ul class="header__links mobile-mode">
-        <li class="links__link ">Features</li>
-        <li class="links__link">Pricing</li>
-        <li class="links__link">Resources</li>
-      </ul>
-
-      <div class="header__account mobile-mode">
-        <button class="account__login">Login</button>
-        <button class="account__signup">Sign Up</button>
-      </div>
-
-      <!-- ESSA REGIÃO SERÁ ATIVADA EM DISPOSITIVOS MOBILE: -->
-
-      <div class="header__menu-hamburguer desktop-mode">
-        <div class="menu-hamburguer__line"></div>
-        <div class="menu-hamburguer__line"></div>
-        <div class="menu-hamburguer__line"></div>
-      </div>
-
-      <div class="header__mobile-navigation desktop-mode">
-        <ul class="mobile-navigation__links">
+        <ul class="header__links mobile-mode">
           <li class="links__link ">Features</li>
           <li class="links__link">Pricing</li>
           <li class="links__link">Resources</li>
         </ul>
 
-        <div class="linha-login"></div>
-
-        <div class="mobile-navigation__account">
+        <div class="header__account mobile-mode">
           <button class="account__login">Login</button>
           <button class="account__signup">Sign Up</button>
         </div>
-      </div>
-  </header>
 
+        <!-- ESSA REGIÃO SERÁ ATIVADA EM DISPOSITIVOS MOBILE: -->
 
-  <main class="main">
-      <section class="main__presentation">
-
-        <div class="presentation__info">
-          <h1 class="info__title">More than just shorter links</h1>
-          <p class="info__text">Build your brand’s recognition and get detailed insights on how your links are performing.</p>
-          <button class="info__button">Get Started</button>
-
+        <div class="header__menu-hamburguer desktop-mode">
+          <div class="menu-hamburguer__line"></div>
+          <div class="menu-hamburguer__line"></div>
+          <div class="menu-hamburguer__line"></div>
         </div>
 
-      <img src="images/illustration-working.svg" alt="" class="presentation__img">
+        <div class="header__mobile-navigation desktop-mode">
+          <ul class="mobile-navigation__links">
+            <li class="links__link ">Features</li>
+            <li class="links__link">Pricing</li>
+            <li class="links__link">Resources</li>
+          </ul>
 
-      </section>
+          <div class="linha-login"></div>
+
+          <div class="mobile-navigation__account">
+            <button class="account__login">Login</button>
+            <button class="account__signup">Sign Up</button>
+          </div>
+        </div>
+    </header>
 
 
+    <main class="main">
       
-
-      <section class="main__shorten">
-          <div class="shorten__action">
-            <input type="text" id="link-to-short" class="action__input" placeholder="Shorten a link here">
-            <button class="action__button">Shorten It!</button>
-
-            <div class="action__bg"></div>
-          </div>
-
-
-          <div class="shorten__shortened">
-            <p class="shortened__link-unshort">https:www.googleyoutube.com</p>
-
-            <div class="shortened__result">
-              <p class="result__link-short">https:google.com</p>
-              <button class="result__copy-button">Copy</button>
-
-            </div>
-
-
-          </div>
-
-          <div class="shorten__shortened">
-            <p class="shortened__link-unshort">https:www.googleyoutube.com</p>
-
-            <div class="shortened__result">
-              <p class="result__link-short">https:google.com</p>
-              <button class="result__copy-button">Copy</button>
-
-            </div>
-
-
-          </div>
-        </section>
-    
-
-
-        <section class="main__statics">
-
-            <section class="statics-container">
-              <div class="statics__header">
-                <h2>Advanced Statistics</h2>
-                <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
-              </div>
-            </section>
-        </section>
-  </main>
-
-<!-- 
- 
-  
-
-  Advanced Statistics
-
-  Track how your links are performing across the web with our 
-  advanced statistics dashboard.
-
-  Brand Recognition
-
-  Boost your brand recognition with each click. Generic links don’t 
-  mean a thing. Branded links help instil confidence in your content.
-
-  Detailed Records
-
-  Gain insights into who is clicking your links. Knowing when and where 
-  people engage with your content helps inform better decisions.
-
-  Fully Customizable
-
-  Improve brand awareness and content discoverability through customizable 
-  links, supercharging audience engagement.
-
-  Boost your links today
-
-  Get Started
-
-  Features
-
-  Link Shortening
-  Branded Links
-  Analytics
-
-  Resources
-
-  Blog
-  Developers
-  Support
-
-  Company
-
-  About
-  Our Team
-  Careers
-  Contact -->
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
-
-
-  <!-- Scripts: -->
-  <script src="script.js"></script>
-</body>
-</html>
+    </main>
+    <script src="script.js"></script>
+  </body>
+  </html>
