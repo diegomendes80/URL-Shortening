@@ -8,12 +8,32 @@ buttonNavMenu.addEventListener('click', function (){
 
     if(NavMenu.style.display == "none"){
         NavMenu.style.display = "flex";
+        document.querySelector('.presentation__text').style.marginTop = "2rem";
 
     }
     else{
         NavMenu.style.display = "none";
+        document.querySelector('.presentation__text').style.marginTop = "0";
+
     }
 })
 
 // ------------------------------------------------------------------------------------------------------
 
+
+// FUNÇÃO QUE MUDA O BG DA ACTION DE ACORDO COM O TAMANHO DA TELA: ------------------------------------------------------
+
+window.addEventListener('resize', function(){
+if(window.innerWidth < 850){
+    document.querySelector('.action__bg').style.backgroundImage = "url('../../images/bg-shorten-mobile.svg')";
+}else{
+    document.querySelector('.action__bg').style.backgroundImage = "url('../../images/bg-shorten-desktop.svg')";
+
+}
+
+});
+
+// -------------------------------------------------------------------------------------------------------------------------
+
+
+const CopyButtons = document.querySelectorAll('.shorten__copy');

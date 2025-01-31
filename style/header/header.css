@@ -20,6 +20,7 @@ header {
   margin: 0 auto;
   padding: 0.8rem 0;
   width: 85%;
+  height: 10vh;
   display: flex;
   align-items: center;
 }
@@ -45,24 +46,25 @@ header .header__account {
   margin-left: auto;
   margin-right: 3rem;
 }
-header .header__account button {
+header .header__account .account__login {
+  color: hsl(257, 7%, 63%);
+  background-color: white;
+  border: none;
+  font-weight: 700;
+}
+header .header__account .account__login:hover {
+  cursor: pointer;
+}
+.green-button, header .header__account .account__signup {
+  color: white;
+  background-color: hsl(180, 66%, 49%);
   font-weight: 700;
   padding: 0.4rem 1rem;
   border-radius: 20px;
   border: none;
 }
-header .header__account button:nth-child(1) {
-  color: hsl(257, 7%, 63%);
-  background-color: white;
-}
-header .header__account button:nth-child(2) {
-  color: white;
-  background-color: hsl(180, 66%, 49%);
-}
-header .header__account button:nth-child(1):hover {
-  cursor: pointer;
-}
-header .header__account button:nth-child(2):hover {
+
+.green-button:hover, header .header__account .account__signup:hover {
   color: white;
   background-color: hsl(180, 66%, 59%);
   cursor: pointer;
@@ -106,6 +108,8 @@ header .header__account button:nth-child(2):hover {
     background-color: hsl(257, 7%, 63%);
   }
   header .header__mobile-navigation {
+    position: relative;
+    z-index: 1;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -114,6 +118,7 @@ header .header__account button:nth-child(2):hover {
     background-color: hsl(257, 27%, 26%);
     border-radius: 10px;
     margin-top: 1.2rem;
+    margin-bottom: 2rem;
     font-weight: 700;
     color: white;
   }

@@ -4,10 +4,11 @@
 
 
 header{
-    // background-color: rgba(0, 255, 255, 0.207);
+//    background-color: white;
     margin: 0 auto;
     padding: .8rem 0;
     width: 85%;
+    height: 10vh;
     
     display: flex;
     align-items: center;
@@ -36,38 +37,43 @@ header{
         margin-left: auto;
         margin-right: 3rem;
 
-        button{
-            font-weight: 700;
-            padding: .4rem 1rem;
+        
 
-            border-radius: 20px;
-            border: none;
-
-        }
-
-        button:nth-child(1){
+        .account__login{
+            
             color: var.$grayish-violet;
             background-color: white;
+            border: none;
+            font-weight: 700;
         }
-        button:nth-child(2){
-            color: white;
-            background-color: var.$Cyan;
-        }
-
-        button:nth-child(1):hover{
+        .account__login:hover{
             cursor: pointer;
         }
 
-        button:nth-child(2):hover{
-            color: white;
-            background-color: var.$Cyan-hover;
-            cursor: pointer;
+        .account__signup{
+            @extend .green-button;
         }
     }
 }
 
 
 
+.green-button{
+    color: white;
+    background-color: var.$Cyan;
+    font-weight: 700;
+    padding: .4rem 1rem;
+
+    border-radius: 20px;
+    border: none;
+}
+
+
+.green-button:hover{
+    color: white;
+    background-color: var.$Cyan-hover;
+    cursor: pointer;
+}
 
 
 
@@ -113,16 +119,23 @@ header{
         row-gap: 5px;
         margin-left: auto;
 
+        
         div{
             width: 30px;
             height: 3.5px;
             background-color: var.$grayish-violet;
+
+            
+
         }
         
     }
 
 
     .header__mobile-navigation{
+
+        position: relative;
+        z-index: 1;
         
         width: 100%;
         display: flex;
@@ -133,6 +146,7 @@ header{
         
         border-radius: 10px;
         margin-top: 1.2rem;
+        margin-bottom: 2rem;
 
         font-weight: 700;
         color: white;

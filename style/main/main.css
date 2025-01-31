@@ -1,1 +1,341 @@
-/*# sourceMappingURL=main.css.map */
+body {
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: "Poppins", serif;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  font-family: "Poppins", serif;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+header {
+  margin: 0 auto;
+  padding: 0.8rem 0;
+  width: 85%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+header .header__links {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+header .header__links li {
+  font-size: 16px;
+  font-weight: 500;
+  color: hsl(257, 7%, 63%);
+}
+header .header__links li:hover {
+  cursor: pointer;
+  color: hsl(257, 27%, 26%);
+}
+header .header__account {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  margin-left: auto;
+  margin-right: 3rem;
+}
+header .header__account .account__login {
+  color: hsl(257, 7%, 63%);
+  background-color: white;
+  border: none;
+  font-weight: 700;
+}
+header .header__account .account__login:hover {
+  cursor: pointer;
+}
+.green-button, .main__presentation .presentation__text button, header .header__account .account__signup {
+  color: white;
+  background-color: hsl(180, 66%, 49%);
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: none;
+}
+
+.green-button:hover, .main__presentation .presentation__text button:hover, header .header__account .account__signup:hover {
+  color: white;
+  background-color: hsl(180, 66%, 59%);
+  cursor: pointer;
+}
+
+.desktop-mode {
+  display: none;
+}
+
+.mobile-mode {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .linha-login {
+    width: 90%;
+    height: 1px;
+    background-color: hsl(257, 7%, 63%);
+    margin: 1rem 0;
+  }
+  header {
+    width: 85%;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+  }
+  header .desktop-mode {
+    display: block;
+  }
+  header .mobile-mode {
+    display: none;
+  }
+  header .header__menu-hamburguer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    margin-left: auto;
+  }
+  header .header__menu-hamburguer div {
+    width: 30px;
+    height: 3.5px;
+    background-color: hsl(257, 7%, 63%);
+  }
+  header .header__mobile-navigation {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: hsl(257, 27%, 26%);
+    border-radius: 10px;
+    margin-top: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: white;
+  }
+  header .header__mobile-navigation ul {
+    font-family: "Poppins";
+    padding: 0;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+  header .header__mobile-navigation .mobile-navigation__account {
+    display: none;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  header .header__mobile-navigation .mobile-navigation__account button {
+    font-weight: 700;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 17px;
+  }
+  header .header__mobile-navigation .mobile-navigation__account button:nth-child(1) {
+    background-color: hsl(257, 27%, 26%);
+  }
+  header .header__mobile-navigation .mobile-navigation__account button:nth-child(2) {
+    margin-bottom: 1rem;
+    background-color: hsl(180, 66%, 49%);
+  }
+  header .header__mobile-navigation .mobile-navigation__account button:nth-child(1):hover {
+    cursor: pointer;
+  }
+  header .header__mobile-navigation .mobile-navigation__account button:nth-child(2):hover {
+    color: white;
+    background-color: hsl(180, 66%, 59%);
+    cursor: pointer;
+  }
+  header .header__mobile-navigation {
+    display: none;
+  }
+}
+main {
+  width: 100vw;
+  height: auto;
+  position: relative;
+}
+
+.main__presentation {
+  position: relative;
+  width: 85%;
+  height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.main__presentation .presentation__text {
+  width: 40%;
+  position: relative;
+  z-index: 1;
+}
+.main__presentation .presentation__text h1 {
+  font-size: 60px;
+  margin-bottom: 0;
+}
+.main__presentation .presentation__text p {
+  color: hsl(257, 7%, 63%);
+}
+.main__presentation .presentation__text button {
+  padding: 1rem 2.5rem;
+  font-size: 18px;
+  margin-top: 2rem;
+}
+.main__presentation .presentation__image {
+  position: absolute;
+  width: 60%;
+  left: 50%;
+}
+
+.main__action {
+  position: relative;
+  z-index: 11;
+  width: 65%;
+  height: 150px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.main__action .action__menu {
+  background-color: hsl(257, 27%, 26%);
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+}
+.main__action .action__menu input, .main__action .action__menu button {
+  position: relative;
+  z-index: 2;
+  padding: 0.8rem;
+}
+.main__action .action__menu button {
+  border-radius: 5px;
+}
+.main__action .action__menu input {
+  flex-grow: 1;
+  border-radius: 5px;
+  border: none;
+}
+.main__action .action__menu .action__bg {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../images/bg-shorten-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main__action .action__results {
+  width: 100%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+.main__action .action__results .results__result {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aqua;
+  border-radius: 10px;
+  padding: 0 1rem;
+}
+.main__action .action__results .results__result p {
+  font-weight: 500;
+  word-wrap: break-word;
+  white-space: normal;
+}
+.main__action .action__results .results__result .result__original {
+  width: 50%;
+  background-color: red;
+}
+.main__action .action__results .results__result .result__shortened {
+  width: 50%;
+  color: hsl(180, 66%, 49%);
+  display: flex;
+  justify-content: flex-end;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+.main__action .action__results .results__result .result__shortened button {
+  padding: 0 1.5rem;
+  border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+  .main__presentation {
+    flex-direction: column;
+  }
+  .main__presentation .presentation__text {
+    width: 100%;
+    text-align: center;
+    order: 2;
+  }
+  .main__presentation .presentation__text h1 {
+    font-size: 40px;
+  }
+  .main__presentation .presentation__text p {
+    font-size: 16px;
+  }
+  .main__presentation .presentation__image {
+    position: relative;
+    width: 110%;
+    left: 15%;
+    order: 1;
+    z-index: 0;
+  }
+  .main__action {
+    width: 85%;
+  }
+  .main__action .action__menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .main__action .action__menu button {
+    width: 100%;
+  }
+  .main__action .action__menu input {
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */
