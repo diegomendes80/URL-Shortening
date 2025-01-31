@@ -26,8 +26,11 @@ buttonNavMenu.addEventListener('click', function (){
 window.addEventListener('resize', function(){
 if(window.innerWidth < 850){
     document.querySelector('.action__bg').style.backgroundImage = "url('../../images/bg-shorten-mobile.svg')";
+    this.document.querySelector('.boost__bg').style.backgroundImage = "url('../../images/bg-boost-mobile.svg')";
 }else{
     document.querySelector('.action__bg').style.backgroundImage = "url('../../images/bg-shorten-desktop.svg')";
+    this.document.querySelector('.boost__bg').style.backgroundImage = "url('../../images/bg-boost-desktop.svg')";
+
 
 }
 
@@ -36,4 +39,12 @@ if(window.innerWidth < 850){
 // -------------------------------------------------------------------------------------------------------------------------
 
 
-const CopyButtons = document.querySelectorAll('.shorten__copy');
+const CopyButtons = document.querySelectorAll('.link__copy');
+
+CopyButtons.forEach((button) => {
+    button.addEventListener('click', function(){
+        button.textContent = 'Copied!';
+        button.style.backgroundColor = "hsl(260, 8%, 14%)";
+        
+    })
+});
