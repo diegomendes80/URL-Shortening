@@ -41,10 +41,14 @@ if(window.innerWidth < 850){
 
 const CopyButtons = document.querySelectorAll('.link__copy');
 
-CopyButtons.forEach((button) => {
-    button.addEventListener('click', function(){
+
+export function copiaLink(){
         button.textContent = 'Copied!';
         button.style.backgroundColor = "hsl(260, 8%, 14%)";
+        const textToCopy = document.querySelector('shortened__link');
+        textToCopy.select();
+        textToCopy.setSelectionRange(0, 99999); // Para dispositivos móveis
+  
+        navigator.clipboard.writeText(textToCopy.value);
         
-    })
-});
+    }
